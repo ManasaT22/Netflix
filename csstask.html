@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+           box-sizing: border-box;
+           scrollbar-width: none;
+        }
+        .section{
+        height: 100vh;
+           width: 100%;
+        background-image: url(netflixcover.png);
+        background-size: cover;
+        z-index: 0;
+        position: relative;
+        }
+        .section::before{
+            content:'';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(42, 35, 35);
+            opacity: 0.4;
+        }
+        .box{
+            width: 650px;
+            height: 300px;
+         background-color: transparent; 
+            
+        }
+        .heading{
+                   font-size: 48px;
+                   font-weight: 900;
+                   color: white;
+                   text-shadow: 0 0 8px black;
+        }
+         .subheading{
+                   color: white;
+                   font-size: 20px;
+                   font-weight: 700;
+                   text-shadow: 0 0 8px black;
+         }
+         .subheading1{
+                   color: white;
+                   font-size: 19px;
+                   font-weight: 600;
+                   text-shadow: 0 0 8px black;
+         }
+         .input{
+               width: 105%;
+         }
+         .input1{
+            width: 70%;
+             color: white;
+             font-size: 20px;
+             font-weight:300;
+         }
+          .start{
+            width: 30%;
+            height: 57px;
+            font-size: 22px;
+            font-weight:400;
+            position: relative;
+            bottom: 7px;
+          }
+          .inputfield{
+            height: 40px;
+            outline: none;
+          }
+          .section::after{
+                content:'';
+                position: absolute;
+                bottom: 0;
+                height: 90px;
+                min-width: 100vw;
+                background-color: black;
+                border-top: 10px solid rgb(173, 40, 40);
+                border-radius: 50% 50% 0 0;
+                box-shadow: inset 0 10px 10px rgb(42, 42, 162);
+
+          }
+          .boxes{
+           max-width: 69vw;
+           margin: auto;
+           min-height: 350px;
+           margin: auto;
+             background-color: black; 
+            padding: 10px;
+            display: flex;
+            overflow: scroll;
+          }
+          .boxp{
+            position: relative;
+            min-width: 200px;
+            height: 250px;
+            cursor:pointer;
+            background-color: blueviolet;
+             background-image: url(pic1.png);
+            background-size: cover; 
+             margin: 10px;   
+             border-radius: 30px;
+          }
+           .section-2{
+            background-color: black;
+            width:100vw;
+           height: auto;
+        }  
+        .trend{
+            color: white;
+            margin-left: 60px;
+            margin-bottom: 15px;
+        }
+         .boxp1{
+            position: relative;
+            min-width: 200px;
+            height: 250px;
+            cursor:pointer;
+            background-color: blueviolet;
+             background-image: url(1.webp);
+            background-size: cover; 
+             margin: 10px;
+             border-radius: 30px;  
+          }
+          .boxp2{
+            position: relative;
+            min-width: 200px;
+            height: 250px;
+            cursor:pointer;
+            background-color: blueviolet;
+             background-image: url(8.webp);
+            background-size: cover; 
+             margin: 10px;  
+             border-radius: 30px;  
+          }
+          .boxp3{
+            position: relative;
+            min-width: 200px;
+            height: 250px;
+            cursor:pointer;
+            background-color: blueviolet;
+             background-image: url(4.webp);
+            background-size: cover; 
+             margin: 10px;  
+             border-radius: 30px;  
+          }
+          .boxp4{
+            position: relative;
+            min-width: 200px;
+            height: 250px;
+            cursor:pointer;
+            background-color: blueviolet;
+             background-image: url(2.webp);
+            background-size: cover; 
+             margin: 10px;  
+             border-radius: 30px;  
+          }
+          .boxp5{
+            position: relative;
+            min-width: 200px;
+            height: 250px;
+            cursor:pointer;
+            background-color: blueviolet;
+             background-image: url(6.webp);
+            background-size: cover; 
+             margin: 10px;  
+             border-radius: 30px;  
+          }
+          .boxp6{
+            position: relative;
+            min-width: 200px;
+            height: 250px;
+            cursor:pointer;
+            background-color: blueviolet;
+             background-image: url(10.webp);
+            background-size: cover; 
+             margin: 10px;  
+             border-radius: 30px;  
+          }
+          .boxp7{
+            position: relative;
+            min-width: 200px;
+            height: 250px;
+            cursor:pointer;
+            background-color: blueviolet;
+              background-image: url(pic12.webp);
+            background-size: cover;  
+             margin: 10px; 
+             border-radius: 30px;   
+          } 
+        .box1::after {
+            content: '1';
+            font-size: 110px;
+            font-weight: 700;
+            color: black; 
+            position: absolute;
+            left: -18px;
+            top: 120px;
+            -webkit-text-stroke: 2px white;
+            transition: all 0.4s ease;
+        }
+        .box2::after {
+            content: '2';
+            font-size: 110px;
+            font-weight: 700;
+            color: black; 
+            position: absolute;
+            left: -18px;
+            top: 120px;
+            -webkit-text-stroke: 2px white;
+            /* transition: all 0.4s ease; */
+        }
+        .box3::after {
+            content: '3';
+            font-size: 110px;
+            font-weight: 700;
+            color: black; 
+            position: absolute;
+            left: -18px;
+            top: 120px;
+            -webkit-text-stroke: 2px white;
+            transition: all 0.4s ease;
+        }
+        .box4::after {
+            content: '4';
+            font-size: 110px;
+            font-weight: 700;
+            color: black; 
+            position: absolute;
+            left: -18px;
+            top: 120px;
+            -webkit-text-stroke: 2px white;
+            transition: all 0.4s ease;
+        }
+        .box5::after {
+            content: '5';
+            font-size: 110px;
+            font-weight: 700;
+            color: black; 
+            position: absolute;
+            left: -18px;
+            top: 120px;
+            -webkit-text-stroke: 2px white;
+            transition: all 0.4s ease;
+        }
+        .box6::after {
+            content: '6';
+            font-size: 110px;
+            font-weight: 700;
+            color: black; 
+            position: absolute;
+            left: -18px;
+            top: 120px;
+            -webkit-text-stroke: 2px white;
+            transition: all 0.4s ease;
+        }
+        .box7::after {
+            content: '7';
+            font-size: 110px;
+            font-weight: 700;
+            color: black; 
+            position: absolute;
+            left: -18px;
+            top: 120px;
+            -webkit-text-stroke: 2px white;
+            transition: all 0.4s ease;
+        }
+
+        .box8::after {
+            content: '8';
+            font-size: 110px;
+            font-weight: 700;
+            color: black; 
+            position: absolute;
+            left: -18px;
+            top: 120px;
+            -webkit-text-stroke: 2px white;
+            transition: all 0.4s ease;
+        }
+        .images:hover {
+            scale: 1.07;
+        }
+        .head3{
+            margin-left: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: 400;
+        }
+        .section3{
+            width: 100vw;
+           height: auto;
+           background-color: black;
+           
+        }
+        .fd{
+            max-width: 100vw;
+          min-height:350px;
+            background-color: black;
+            margin-left: 180px;
+            padding: 20px;
+        }
+        .b1{
+              min-width: 262px;
+             height: 262px;
+              background-image: url(d1.png);
+              background-size: cover;
+              border-radius: 12px;
+              
+        }
+        .b2{
+              min-width: 262px;
+             height: 262px;
+              background-image: url(d2.png);
+              background-size: cover;
+              border-radius: 12px;
+            
+        }
+        .b3{
+              min-width: 262px;
+             height: 262px;
+              background-image: url(d3.png);
+              background-size: cover;
+              border-radius: 12px;
+        }
+        .b4{
+              min-width: 262px;
+             height: 262px;
+              background-image: url(d4.png);
+              background-size: cover;
+              border-radius: 12px;
+        }
+        .acc {
+            width: 70%;
+            margin: auto;
+        }
+
+        .ac {
+            width: 100%;
+            border-radius: 2px;
+            background-color: rgb(128, 128, 128);
+        }
+        .ac:hover{
+            cursor: pointer;
+            background-color: rgba(131, 119, 119, 0.807);
+        }
+        .section4{
+            background-color: black;
+            max-width:100vw;
+           height: auto;
+        } 
+        .head4{
+            margin-left: 30px;
+            color: white;
+            font-weight: 400;
+        }
+        .section5{
+            background-color: black;
+            max-width:100vw;
+            height:auto;
+        }
+        .input5{
+            width: 900px;
+            margin-top: 30px;
+        }
+        .head5{
+            color: white;
+            font-size: 20px;
+            font-weight: 500;
+            margin-top: 50px;
+        }
+        .section6{
+            background-color: black;
+            max-width:100vw;
+          height: auto;
+        }
+        .q1{
+            color: white;
+            font-size: 20px;
+            font-weight: 500;
+            margin-left: 60px;
+           margin-bottom: 40px;
+           margin-top: 30px;
+        }
+       .last{
+        color: white;
+        font-size: 20px;
+        font-weight: 400;
+       }
+        .logo {
+            width: 200px;
+            position: absolute;
+            left: 90px;
+            top: 10px;
+        }
+            .right {
+            position: absolute;
+            top: 30px;
+            right: 100px;
+        }
+        @media (max-width:1100px)
+        {
+            .fd{
+                display:flex;
+                flex-wrap: wrap;
+                width:90%;
+            }
+            .heading{
+                font-size: 30px;
+            }
+            .sub-heading{
+                font-size: 15px;
+            }
+            .input{
+                width:75%;
+            }
+            .subheading1{
+                font-size: 15px;
+            }
+            .logo{
+            position: absolute;
+            top: 1px;
+            left: 100px;
+            width: 200px;
+        }
+        .start{
+                width:40%;
+                font-size: 20px;
+                margin-bottom: 0px;
+                height: 60px;
+        }
+        @media(max-width:850px)
+        {
+            .start{
+                width:30%;
+                font-size: 20px;
+                margin-bottom: 0px;
+                height: 60px;
+                /* background-color: red; */
+               
+            }
+            .logo{
+            position: absolute;
+            top: 1px;
+            left: 10px;
+            width: 150px;
+        }
+        .start{
+            width: 40%;
+            height: 50px;
+        }
+        .input5{
+            width: 80%;
+        }
+        .fd{
+                display:flex;
+                flex-wrap: wrap;
+                width:90%;
+                margin-left: 50px;
+            }
+    }
+    @media(max-width:700px)
+        {
+            .footer{
+                height:400px;
+                padding:10px;
+            }
+            .signin{
+                display: none;
+                
+            } 
+            .logo{
+            position: absolute;
+            top: 1px;
+            left: 10px;
+            width: 150px;
+        }
+        .input5{
+                flex-direction: column;
+                align-items: center;
+            }
+            .start{
+                width:25%;
+                font-size: 12px;
+                margin-bottom: 0px;
+                height: 60px;
+                /* background-color: red; */
+               
+            }
+            .tags{
+                margin-left: 100px;
+                flex-direction: column;
+            }
+            .q1{
+                margin-top: 30px;
+            }
+        }
+        .fd{
+            margin-left: 10px;
+            /* flex-direction: column; */
+            flex-wrap: wrap;
+        }
+        .input{
+         flex-direction: column;
+            align-items: center;
+        }
+    }   
+    </style>
+</head>
+<body>
+   <!-- section1 -->
+    <div class="container-fluid section d-flex justify-content-center align-items-center"> 
+          <div class="box d-flex justify-content-center align-items-center flex-column">
+             <h1 class="heading">Unlimited movies,TV</h1>
+             <h1 class="heading">Shows and more</h1>
+             <p class="subheading">Starts at ₹149. Cancel at any time.</p>
+             <p class="subheading1">Ready to watch? Enter your email to create or restart your members.</p>
+             <div class="input d-flex justify-content-between gap-4 align-items-center ">
+                <div class="form-floating mb-3 input1">
+                    <input type="email" class="form-control bg-transparent  text-light inputfield" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput"class="text-secondary">Email address</label>
+                  </div>
+                  <button class="btn btn-danger start" type="submit">Get started &gt;</button>
+            </div>
+               
+          </div>
+    </div>
+    <!-- sectiontop -->
+    <img src="Netflix_Logo_PMS.png" class="logo" alt="">
+    <div class="right d-flex gap-2">
+        <div class="dropdown d-flex ">
+            <button class="btn btn-transparent btn btn-outline-light dropdown-toggle" type="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="translate copy.svg" class="drp1"> English
+        </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">English</a></li>
+                <li><a class="dropdown-item" href="#">Hindi</a></li>
+                <li><a class="dropdown-item" href="#">Telugu</a></li>
+            </ul>
+        </div>
+        <button type="button" class="btn btn-danger signin p-2">Sign In</button>
+    </div>
+     <!-- section2 -->
+        <div class="container-fluid section-2">
+            <h1 class="trend text-light">Trending Now</h1>
+            <div class="boxes">
+                     <div class="boxp images box1">
+                    </div>
+                    <div class="boxp1 images box2">
+                    </div>
+                    <div class="boxp2 images box3">
+                    </div>
+                    <div class="boxp3 images box4">
+                    </div>
+                    <div class="boxp4 images box5">
+                    </div>
+                    <div class="boxp5 images box6">
+                    </div>
+                    <div class="boxp6 images box7">
+                    </div> 
+                    <div class="boxp7 images box8">
+                    </div>       
+            </div> 
+        </div>   
+     <!-- section3 -->
+      <div class="section3">
+        <h1 class="head3">More reasons to join</h1>
+        <div class="fd d-flex justify-content-start gap-4 align-items-center">
+              <div class=" b b1">
+              </div>
+              <div class="b b2">
+            </div>
+            <div class="b b3">
+            </div>
+            <div class="b b4">
+            </div>
+        </div>
+      </div>
+      <!-- section4 -->
+      <div class="section4">
+        <h1 class="px-3 text-light fs-9 head4">Frequently Asked Questions</h1>
+      <div class="acc mt-4">
+          <div class="ac1 ac  mt-3  d-flex justify-content-between align-items-center p-2">
+              <h1 class="heading mx-2 fs-4 fw-normal">What is Netflix ?</h1><i class="fa-solid fa-plus text-light mx-3"></i>
+          </div>
+          <div class="ac2 ac d-flex mt-3 justify-content-between align-items-center p-2">
+              <h1 class="heading mx-2 fs-4 fw-normal">How much does Netflix cost ?</h1><i class="fa-solid fa-plus text-light mx-3"></i>
+          </div>
+          <div class="ac3 ac d-flex mt-3 justify-content-between align-items-center p-2">
+              <h1 class="heading mx-2 fs-4 fw-normal">Where can I watch ?</h1><i class="fa-solid fa-plus text-light mx-3"></i>
+          </div>
+          <div class="ac4 ac d-flex mt-3 justify-content-between align-items-center p-2">
+              <h1 class="heading mx-2 fs-4 fw-normal">How can I cancel ?</h1><i class="fa-solid fa-plus text-light mx-3"></i>
+          </div>
+          <div class="ac5 ac d-flex mt-3 justify-content-between align-items-center p-2">
+              <h1 class="heading mx-2 fs-4 fw-normal">What can I watch on Netflix ?</h1><i class="fa-solid fa-plus text-light mx-3"></i>
+          </div>
+          <div class="ac6 ac d-flex mt-3 justify-content-between align-items-center p-2">
+              <h1 class="heading mx-2 fs-4 fw-normal">Is Netflix good for kids ?</h1><i class="fa-solid fa-plus text-light mx-3"></i>
+          </div>
+      </div>
+      </div>
+      <!-- section5 -->
+       <div class="section5">
+              <div class="line d-flex justify-content-center align-items-center flex-column">
+                <h5 class="head5">Ready to watch?Enter your email to create or restart your membership.</h5>
+                <div class="input5 d-flex justify-content-between gap-3 align-items-center">
+                    <div class="form-floating mb-3 input1">
+                        <input type="email" class="form-control bg-transparent flex-lg-row flex-md-row flex-column flex-sm-column inputfield" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput"class="text-secondary">Email address</label>
+                      </div>
+                      <button class="btn btn-danger start" type="submit">Get started &gt;</button>
+                </div>
+                   
+              </div>
+       </div>
+       <!-- section6 -->
+       <footer class="d-flex section6 justify-content-center gap-4 flex-column align-items-center footer-Items">
+        <h5 class="q1">Questions? Call 000-800-919-1743</h5>
+            <div class="d-flex gap-2 justify-content-evenly tags  align-items-start w-100">
+              <div class="d-flex flex-column gap-2">
+                <a href="#">FAQ</a>
+                <a href="#">Account</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Ways to Watch</a>
+                <a href="#">Privacy</a>
+              </div>
+              <div class="d-flex flex-column gap-2">
+                <a href="#">Corporate Information</a>
+                <a href="#">Speed Test</a>
+                <a href="#">Only on Netflix</a>
+                <a href="#">Help Centre</a>
+              </div>
+              <div class="d-flex flex-column gap-2">
+                <a href="#">Media Centre</a>
+                <a href="#">Jobs</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Cookie Preferences</a>
+              </div>
+              <div class="d-flex flex-column gap-2">
+                <a href="#">Contact Us</a>
+                <a href="#">Legal Notices</a>
+                <a href="#">Ways to Watch</a>
+              </div>
+            </div>
+            <h5 class="last">Netflix India</h5>
+    </footer>
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+</html>
